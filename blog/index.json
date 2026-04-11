@@ -1,0 +1,14 @@
+[
+    {
+        "slug": "apprendre-avec-ia",
+        "title": "Comment j'apprends à coder avec l'IA",
+        "date": "2026-03-15",
+        "excerpt": "Mon retour d'expérience sur l'utilisation de Claude Code pour apprendre le développement web en partant de zéro."
+    },
+    {
+        "slug": "mon-premier-portfolio",
+        "title": "Construire son portfolio de A à Z",
+        "date": "2026-03-10",
+        "excerpt": "Les étapes clés pour créer un portfolio développeur efficace, même quand on débute."
+    }
+]

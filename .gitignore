@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Fichiers personnels / secrets
+CLAUDE.local.md
+.env
+*.key
+*secret*
+credentials.json

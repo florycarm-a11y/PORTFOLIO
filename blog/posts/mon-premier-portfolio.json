@@ -1,0 +1,31 @@
+{
+    "title": "Construire son portfolio de A à Z",
+    "date": "2026-03-10",
+    "tags": ["HTML", "CSS", "Portfolio"],
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Un portfolio n'a pas besoin d'être parfait pour être utile. Il doit montrer qui vous êtes, ce que vous savez faire, et donner envie d'en savoir plus."
+        },
+        {
+            "type": "heading",
+            "text": "Les fondations"
+        },
+        {
+            "type": "paragraph",
+            "text": "J'ai choisi une stack simple : HTML, CSS et JavaScript vanilla. Pas de framework, pas de bundler. Chaque ligne de code a une raison d'être. Cette contrainte m'a forcé à comprendre les bases plutôt que de m'appuyer sur des abstractions."
+        },
+        {
+            "type": "heading",
+            "text": "Le design"
+        },
+        {
+            "type": "paragraph",
+            "text": "Un fond sombre, une couleur d'accent, une police lisible. La simplicité est un choix de design, pas un manque d'ambition. J'ai ajouté des animations subtiles et un dark/light mode pour montrer que même un site simple peut être soigné."
+        },
+        {
+            "type": "paragraph",
+            "text": "Mon conseil : commencez petit, publiez tôt, et améliorez au fur et à mesure. Votre portfolio est un projet vivant."
+        }
+    ]
+}

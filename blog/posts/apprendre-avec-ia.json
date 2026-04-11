@@ -1,0 +1,31 @@
+{
+    "title": "Comment j'apprends à coder avec l'IA",
+    "date": "2026-03-15",
+    "tags": ["IA", "Apprentissage", "Claude Code"],
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Quand j'ai commencé à m'intéresser au développement, je ne connaissais pas une seule ligne de HTML. Aujourd'hui, ce portfolio est la preuve qu'on peut apprendre vite avec les bons outils."
+        },
+        {
+            "type": "heading",
+            "text": "Pourquoi l'IA change la donne"
+        },
+        {
+            "type": "paragraph",
+            "text": "L'IA ne remplace pas l'apprentissage — elle l'accélère. Chaque fois que Claude Code génère du code, je prends le temps de comprendre ce qui a été écrit. C'est comme avoir un mentor disponible 24h/24."
+        },
+        {
+            "type": "heading",
+            "text": "Ma méthode"
+        },
+        {
+            "type": "paragraph",
+            "text": "Je commence par décrire ce que je veux en français. Claude Code me propose une implémentation. Je lis le code, je pose des questions, et je modifie moi-même les parties que je comprends. Petit à petit, j'écris de plus en plus de code par moi-même."
+        },
+        {
+            "type": "paragraph",
+            "text": "Le plus important : ne jamais copier-coller sans comprendre. L'IA est un outil, pas une béquille."
+        }
+    ]
+}
