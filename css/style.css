@@ -374,6 +374,12 @@ section {
     margin-bottom: var(--spacing-sm);
 }
 
+.project-card__links {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
 .project-card__link {
     font-size: 0.95rem;
 }

@@ -48,6 +48,45 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => observer.observe(section));
 
+// --- Projects ---
+const projectsGrid = document.querySelector('.projects__grid');
+
+function renderProjects(projects) {
+    projectsGrid.innerHTML = projects.map(p => {
+        const tagsHtml = p.tags.map(t =>
+            `<li class="project-card__tag">${t}</li>`
+        ).join('');
+
+        const homepageLink = p.homepage
+            ? `<a class="project-card__link" href="${p.homepage}" target="_blank" rel="noopener noreferrer">Voir en ligne</a>`
+            : '';
+
+        return `
+            <article class="project-card">
+                <div class="project-card__banner"></div>
+                <div class="project-card__body">
+                    <h3 class="project-card__title">
+                        <a href="${p.url}" target="_blank" rel="noopener noreferrer">${p.name}</a>
+                    </h3>
+                    <p class="project-card__desc">${p.description}</p>
+                    <ul class="project-card__tags">${tagsHtml}</ul>
+                    <div class="project-card__links">
+                        <a class="project-card__link" href="${p.url}" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                        ${homepageLink}
+                    </div>
+                </div>
+            </article>
+        `;
+    }).join('');
+}
+
+fetch('data/projects.json')
+    .then(res => res.json())
+    .then(renderProjects)
+    .catch(() => {
+        projectsGrid.innerHTML = '<p class="project-card__desc">Impossible de charger les projets.</p>';
+    });
+
 // --- Blog ---
 let blogList = document.querySelector('.blog__list');
 const blogSection = document.querySelector('.blog');

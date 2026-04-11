@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Inflexion",
+        "description": "Plateforme d'intelligence financière automatisée : analyses géopolitiques et données de marché en temps réel. 15 APIs, 122 flux RSS, synthèses IA quotidiennes via Claude.",
+        "tags": ["JavaScript", "Supabase", "Express", "Claude API", "GitHub Actions"],
+        "url": "https://github.com/florycarm-a11y/Inflexion",
+        "homepage": "https://inflexionhub.com/"
+    },
+    {
+        "name": "MonPortfolio",
+        "description": "Ce portfolio, construit entièrement avec Claude Code. Site statique HTML/CSS/JS vanilla, dark/light mode, projets chargés dynamiquement.",
+        "tags": ["HTML", "CSS", "JavaScript", "Claude Code"],
+        "url": "https://github.com/florycarm-a11y/PORTFOLIO",
+        "homepage": null
+    }
+]
