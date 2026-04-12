@@ -7,10 +7,24 @@
         "homepage": "https://inflexionhub.com/"
     },
     {
-        "name": "MonPortfolio",
-        "description": "Ce portfolio, construit entièrement avec Claude Code. Site statique HTML/CSS/JS vanilla, dark/light mode, projets chargés dynamiquement.",
-        "tags": ["HTML", "CSS", "JavaScript", "Claude Code"],
-        "url": "https://github.com/florycarm-a11y/PORTFOLIO",
+        "name": "SEMPLICE",
+        "description": "Modèle d'évaluation géopolitique multi-dimensionnel : scoring quantitatif/qualitatif sur 8 dimensions (Sécurité, Économie, Militaire, Politique, Légal, Informationnel, Civil, Environnement), radar interactif et cartographie.",
+        "tags": ["JavaScript", "D3.js", "GeoJSON", "Analyse géopolitique"],
+        "url": "https://github.com/florycarm-a11y/Inflexion",
+        "homepage": "https://inflexionhub.com/expertise.html"
+    },
+    {
+        "name": "Dia_logos",
+        "description": "Outil conversationnel IA pour l'analyse structurée et le raisonnement dialectique. Interface de dialogue augmenté par l'intelligence artificielle.",
+        "tags": ["JavaScript", "Claude API", "IA conversationnelle"],
+        "url": null,
         "homepage": null
+    },
+    {
+        "name": "MonPortfolio",
+        "description": "Ce portfolio, construit entièrement avec Claude Code. Site statique HTML/CSS/JS vanilla, dark/light mode, projets chargés dynamiquement, déploiement CI/CD automatique.",
+        "tags": ["HTML", "CSS", "JavaScript", "Claude Code", "GitHub Actions"],
+        "url": "https://github.com/florycarm-a11y/PORTFOLIO",
+        "homepage": "https://florycarm-a11y.github.io/PORTFOLIO/"
     }
 ]

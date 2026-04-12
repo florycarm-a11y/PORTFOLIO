@@ -57,21 +57,27 @@ function renderProjects(projects) {
             `<li class="project-card__tag">${t}</li>`
         ).join('');
 
+        const githubLink = p.url
+            ? `<a class="project-card__link" href="${p.url}" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>`
+            : '';
+
         const homepageLink = p.homepage
             ? `<a class="project-card__link" href="${p.homepage}" target="_blank" rel="noopener noreferrer">Voir en ligne</a>`
             : '';
+
+        const titleHtml = p.url
+            ? `<a href="${p.url}" target="_blank" rel="noopener noreferrer">${p.name}</a>`
+            : p.name;
 
         return `
             <article class="project-card">
                 <div class="project-card__banner"></div>
                 <div class="project-card__body">
-                    <h3 class="project-card__title">
-                        <a href="${p.url}" target="_blank" rel="noopener noreferrer">${p.name}</a>
-                    </h3>
+                    <h3 class="project-card__title">${titleHtml}</h3>
                     <p class="project-card__desc">${p.description}</p>
                     <ul class="project-card__tags">${tagsHtml}</ul>
                     <div class="project-card__links">
-                        <a class="project-card__link" href="${p.url}" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                        ${githubLink}
                         ${homepageLink}
                     </div>
                 </div>
@@ -160,6 +166,18 @@ fetch('blog/index.json')
     .catch(() => {
         blogList.innerHTML = '<p class="blog-card__excerpt">Impossible de charger les articles.</p>';
     });
+
+// --- Contact form ---
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = contactForm.querySelector('#name').value;
+    const email = contactForm.querySelector('#email').value;
+    const message = contactForm.querySelector('#message').value;
+    const subject = encodeURIComponent(`Contact portfolio — ${name}`);
+    const body = encodeURIComponent(`De : ${name} (${email})\n\n${message}`);
+    window.location.href = `mailto:floryanleblancarm@gmail.com?subject=${subject}&body=${body}`;
+});
 
 // --- Close mobile nav on link click ---
 navList.querySelectorAll('.nav__link').forEach(link => {
