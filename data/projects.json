@@ -14,8 +14,8 @@
         "homepage": "https://inflexionhub.com/expertise.html"
     },
     {
-        "name": "Dia_logos",
-        "description": "Bot Telegram d'entraînement TOEIC Reading (objectif 900+/990). Quiz adaptatif par niveau 1-5, feedback immédiat, tracking de progression et rappels quotidiens.",
+        "name": "TOEIC Bot",
+        "description": "Bot Telegram personnel d'entraînement au TOEIC Reading Part. Quiz adaptatif par niveau 1-5, feedback immédiat, tracking de progression et rappels quotidiens. Objectif 900+.",
         "tags": ["Python", "Telegram Bot API", "Quiz adaptatif"],
         "url": null,
         "homepage": null
