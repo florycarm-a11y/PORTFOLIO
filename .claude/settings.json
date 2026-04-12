@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write",
+        "hook": "bash -c 'case \"$CLAUDE_TOOL_INPUT\" in *\\.env*|*\\.key*|*secret*|*credentials*|*\\.ssh*) echo \"BLOCKED: accès à un fichier sensible interdit\" >&2; exit 2;; esac'"
+      },
+      {
+        "matcher": "Bash",
+        "hook": "bash -c 'case \"$CLAUDE_TOOL_INPUT\" in *\"rm -rf\"*|*sudo*) echo \"BLOCKED: commande destructrice interdite\" >&2; exit 2;; esac'"
+      }
+    ]
+  }
+}
