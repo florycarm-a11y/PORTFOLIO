@@ -8,15 +8,15 @@
     },
     {
         "name": "SEMPLICE",
-        "description": "Modèle d'évaluation géopolitique multi-dimensionnel : scoring quantitatif/qualitatif sur 8 dimensions (Sécurité, Économie, Militaire, Politique, Légal, Informationnel, Civil, Environnement), radar interactif et cartographie.",
+        "description": "Modèle d'évaluation géopolitique multi-dimensionnel : scoring quantitatif/qualitatif sur 8 dimensions, radar interactif et cartographie des zones de risque.",
         "tags": ["JavaScript", "D3.js", "GeoJSON", "Analyse géopolitique"],
         "url": "https://github.com/florycarm-a11y/Inflexion",
         "homepage": "https://inflexionhub.com/expertise.html"
     },
     {
         "name": "Dia_logos",
-        "description": "Outil conversationnel IA pour l'analyse structurée et le raisonnement dialectique. Interface de dialogue augmenté par l'intelligence artificielle.",
-        "tags": ["JavaScript", "Claude API", "IA conversationnelle"],
+        "description": "Bot Telegram d'entraînement TOEIC Reading (objectif 900+/990). Quiz adaptatif par niveau 1-5, feedback immédiat, tracking de progression et rappels quotidiens.",
+        "tags": ["Python", "Telegram Bot API", "Quiz adaptatif"],
         "url": null,
         "homepage": null
     },
