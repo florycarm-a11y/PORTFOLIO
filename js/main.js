@@ -174,7 +174,7 @@ contactForm.addEventListener('submit', e => {
     const name = contactForm.querySelector('#name').value;
     const email = contactForm.querySelector('#email').value;
     const message = contactForm.querySelector('#message').value;
-    const subject = encodeURIComponent(`Contact portfolio — ${name}`);
+    const subject = encodeURIComponent(`Contact portfolio | ${name}`);
     const body = encodeURIComponent(`De : ${name} (${email})\n\n${message}`);
     window.location.href = `mailto:floryanleblancarm@gmail.com?subject=${subject}&body=${body}`;
 });
