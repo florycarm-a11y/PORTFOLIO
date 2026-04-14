@@ -112,7 +112,15 @@ function renderBlogList(posts) {
     `).join('');
 
     blogList.querySelectorAll('.blog-card').forEach(card => {
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
         card.addEventListener('click', () => openArticle(card.dataset.slug));
+        card.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openArticle(card.dataset.slug);
+            }
+        });
     });
 }
 

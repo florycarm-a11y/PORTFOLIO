@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floryan Leblanc | Portfolio Développeur</title>
-    <meta name="description" content="Floryan Leblanc. Prépa B/L, TBS Education, autodidacte en dev. Je construis avec les LLM ce qui prenait une équipe hier.">
+    <meta name="description" content="Portfolio de Floryan Leblanc, developpeur autodidacte. Prepa B/L, TBS Education. Je construis avec les LLM des projets qui prenaient une equipe hier.">
     <link rel="canonical" href="https://florycarm-a11y.github.io/PORTFOLIO/">
 
     <!-- Open Graph -->
@@ -15,16 +15,42 @@
     <meta property="og:image" content="https://florycarm-a11y.github.io/PORTFOLIO/assets/og-cover.png">
     <meta property="og:locale" content="fr_FR">
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Floryan Leblanc | Portfolio Développeur">
+    <meta name="twitter:description" content="Prépa B/L, TBS Education, autodidacte en dev. Je construis avec les LLM ce qui prenait une équipe hier.">
+    <meta name="twitter:image" content="https://florycarm-a11y.github.io/PORTFOLIO/assets/og-cover.png">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Floryan Leblanc",
+        "url": "https://florycarm-a11y.github.io/PORTFOLIO/",
+        "jobTitle": "Développeur en formation",
+        "sameAs": [
+            "https://github.com/florycarm-a11y",
+            "https://www.linkedin.com/in/fleblanc17"
+        ],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "TBS Education"
+        }
+    }
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"></noscript>
 
     <!-- Critical CSS (above the fold: nav + hero) -->
     <style>
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         :root{--color-bg:#0a0a0a;--color-text:#e0e0e0;--color-accent:#64ffda;--color-heading:#fff;--color-nav-bg:rgba(10,10,10,0.8);--blur-nav:10px}
-        :root.light{--color-bg:#fff;--color-text:#1a1a1a;--color-accent:#0d9373;--color-heading:#1a1a1a;--color-nav-bg:rgba(255,255,255,0.8)}
+        :root.light{--color-bg:#fff;--color-text:#1a1a1a;--color-accent:#0a7a5e;--color-heading:#1a1a1a;--color-nav-bg:rgba(255,255,255,0.8)}
         html{scroll-behavior:smooth}
         body{background-color:var(--color-bg);color:var(--color-text);font-family:'Inter',sans-serif;font-size:clamp(1rem,0.95rem + 0.25vw,1.1rem);line-height:1.7}
         .nav{position:fixed;top:0;left:0;width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background-color:var(--color-nav-bg);backdrop-filter:blur(var(--blur-nav));-webkit-backdrop-filter:blur(var(--blur-nav));z-index:100}
@@ -36,6 +62,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Passer au contenu</a>
 
     <!-- Navigation -->
     <nav class="nav" aria-label="Navigation principale">
@@ -54,31 +81,33 @@
             <li><a class="nav__link" href="#projects">Projets</a></li>
             <li><a class="nav__link" href="#blog">Blog</a></li>
             <li><a class="nav__link" href="#contact">Contact</a></li>
+            <li><a class="nav__link" href="CV_Leblanc_Floryan_tbs_2026-03-06_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
         </ul>
     </nav>
 
     <!-- Hero -->
     <header class="hero">
-        <h1 class="hero__title">Floryan</h1>
+        <h1 class="hero__title">Floryan Leblanc</h1>
         <p class="hero__subtitle">Développeur en formation</p>
         <p class="hero__tagline">Les LLM ont changé l'échelle de ce qu'on peut bâtir. J'en profite.</p>
-        <a class="hero__cta" href="#projects">Voir mes projets</a>
+        <div class="hero__actions">
+            <a class="hero__cta" href="#projects">Voir mes projets</a>
+            <a class="hero__cta hero__cta--secondary" href="CV_Leblanc_Floryan_tbs_2026-03-06_CV.pdf" target="_blank" rel="noopener noreferrer">Mon CV</a>
+        </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- À propos -->
         <section class="about" id="about">
             <h2 class="about__title">À propos</h2>
             <div class="about__content">
                 <img class="about__photo" src="assets/images/profile.jpg" alt="Photo de Floryan Leblanc" width="200" height="200">
-                <p class="about__text">
-                    Étudiant en L3 du PGE de TBS Education (ESC Toulouse), passé par la prépa B/L
-                    (maths, lettres, philo, histoire, sciences sociales). Autodidacte en développement.
-                    Les LLM ont changé l'échelle de ce qu'un homme seul peut bâtir.
-                    Le monde dans 15 ans nous est plus étranger que celui d'il y a 50.
-                    Je prends le wagon, avant qu'il ne parte.
-                    Ce portfolio est lui-même construit avec Claude Code.
-                </p>
+                <div class="about__text">
+                    <p>Le genre de parcours d'où l'on ne touche pas une ligne de code : Prépa B/L — maths, philo, sciences sociales, histoire — puis TBS Education.</p>
+                    <p>Début 2026, face à l'émergence de l'IA agentique et à la chute des coûts d'inférence, je commence à me former au développement sur terminal et Claude Code. Je lance Inflexion. Deux mois plus tard : quatre outils fonctionnels, partant tous d'une même volonté — mener de bout en bout des projets concrets qui n'auraient pas pu voir le jour six mois plus tôt.</p>
+                    <p>Ce qui m'intéresse : le moment où l'IA rencontre une organisation réelle — ses tensions, ses résistances, ses angles morts, et surtout ses opportunités.</p>
+                    <p>Je travaille actuellement sur la question de la littératie IA en entreprise et dans le service public, dans le contexte de l'EU AI Act.</p>
+                </div>
             </div>
         </section>
 
@@ -115,6 +144,7 @@
                 </div>
                 <button class="contact__btn" type="submit">Envoyer</button>
             </form>
+            <p class="contact__email">Ou directement par email : <a href="mailto:floryanleblancarm@gmail.com">floryanleblancarm@gmail.com</a></p>
         </section>
     </main>
 

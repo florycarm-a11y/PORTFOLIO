@@ -41,7 +41,7 @@
 :root.light {
     --color-bg: #ffffff;
     --color-text: #1a1a1a;
-    --color-accent: #0d9373;
+    --color-accent: #0a7a5e;
     --color-muted: #555566;
     --color-heading: #1a1a1a;
     --color-card: #f5f5f5;
@@ -49,7 +49,23 @@
     --color-border: #d0d0d0;
     --color-nav-bg: rgba(255, 255, 255, 0.8);
     --color-nav-overlay: rgba(255, 255, 255, 0.95);
-    --color-card-shadow: rgba(13, 147, 115, 0.1);
+    --color-card-shadow: rgba(10, 122, 94, 0.1);
+}
+
+/* --- Skip link --- */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    font-weight: 700;
+    z-index: 200;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 /* --- Base --- */
@@ -284,7 +300,7 @@ section {
 }
 
 :root.light .hero__title {
-    text-shadow: 0 2px 8px rgba(13, 147, 115, 0.15);
+    text-shadow: 0 2px 8px rgba(10, 122, 94, 0.15);
 }
 
 .hero__subtitle {
@@ -298,9 +314,16 @@ section {
     margin-top: var(--spacing-sm);
 }
 
+.hero__actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .hero__cta {
     display: inline-block;
-    margin-top: var(--spacing-md);
     padding: 0.75rem 1.5rem;
     border: 1px solid var(--color-accent);
     color: var(--color-accent);
@@ -313,6 +336,11 @@ section {
     background-color: var(--color-accent);
     color: var(--color-bg);
     text-decoration: none;
+}
+
+.hero__cta--secondary {
+    background-color: transparent;
+    border-style: dashed;
 }
 
 /* --- About --- */
@@ -334,6 +362,10 @@ section {
 
 .about__text {
     color: var(--color-muted);
+}
+
+.about__text p + p {
+    margin-top: var(--spacing-sm);
 }
 
 /* --- Projects --- */
@@ -390,6 +422,11 @@ section {
 .blog-card {
     padding: 1.5rem;
     cursor: pointer;
+}
+
+.blog-card:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }
 
 .blog-card__date {
@@ -489,8 +526,9 @@ section {
 }
 
 .contact__input:focus {
-    outline: none;
     border-color: var(--color-accent);
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }
 
 .contact__textarea {
@@ -514,6 +552,12 @@ section {
 
 .contact__btn:hover {
     opacity: 0.85;
+}
+
+.contact__email {
+    margin-top: var(--spacing-md);
+    font-size: 0.9rem;
+    color: var(--color-muted);
 }
 
 /* --- Footer --- */
@@ -558,6 +602,20 @@ section {
 .fade-in--visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
 }
 
 /* ========================================

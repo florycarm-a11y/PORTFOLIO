@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://florycarm-a11y.github.io/PORTFOLIO/sitemap.xml
