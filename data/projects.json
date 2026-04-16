@@ -1,5 +1,12 @@
 [
     {
+        "name": "L'Arbre d'Intention",
+        "description": "Méthode de cadrage en 8 étapes pour structurer la délégation à une IA. Page interactive avec cas d'étude intégré, en lien avec l'Article 4 de l'EU AI Act.",
+        "tags": ["JavaScript", "D3.js", "Gouvernance IA", "EU AI Act"],
+        "url": "https://github.com/florycarm-a11y/arbre-intention-mindmap",
+        "homepage": "https://florycarm-a11y.github.io/arbre-intention-mindmap/"
+    },
+    {
         "name": "Inflexion",
         "description": "Plateforme d'intelligence financière automatisée : analyses géopolitiques et données de marché en temps réel. 15 APIs, 122 flux RSS, synthèses IA quotidiennes via Claude.",
         "tags": ["JavaScript", "Supabase", "Express", "Claude API", "GitHub Actions"],
