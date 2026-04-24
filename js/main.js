@@ -113,3 +113,38 @@ navList.querySelectorAll('.nav__link').forEach(link => {
         hamburger.setAttribute('aria-expanded', 'false');
     });
 });
+
+// --- Dynamic title trait (grows/shrinks with scroll) ---
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!reduceMotion) {
+    const titles = document.querySelectorAll(
+        '.about__title, .projects__title, .blog__title, .contact__title'
+    );
+    const MIN_PX = 16;
+
+    function updateTraits() {
+        const vh = window.innerHeight;
+        titles.forEach(t => {
+            const rect = t.getBoundingClientRect();
+            const progress = Math.max(0, Math.min(1, 1 - rect.top / vh));
+            const maxPx = t.offsetWidth;
+            const widthPx = MIN_PX + progress * (maxPx - MIN_PX);
+            t.style.setProperty('--trait-w', `${widthPx.toFixed(1)}px`);
+        });
+    }
+
+    let ticking = false;
+    function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+            updateTraits();
+            ticking = false;
+        });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    updateTraits();
+}
